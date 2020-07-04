@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <title>Revenda Herbie</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 bg-primary">
+                <h1 class="text-white">Revenda Herbie</h1>
+                <h4 class="text-white font-italic">Cadastro de Veículos</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="img/fusca.jpg" alt="Revenda Herbie" class="img-fluid mx-auto d-block">
+            </div>
+
+            <div class="col-sm-9">
+                <form>
+                    <div class="input-group mb-3 mt-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Modelo:</span>
+                        </div>
+                        <input type="text" class="form-control" id="modelo" autofocus required>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Marca:</span>
+                        </div>
+                        <input type="text" class="form-control" id="marca" required>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Ano:</span>
+                        </div>
+                        <input type="text" class="form-control" id="ano" required>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Preço R$:</span>
+                        </div>
+                        <input type="text" class="form-control" id="preco" required>
+                        <div class="input-group-append">
+                            <input type="submit" class="btn btn-primary" value="Adicionar">
+                        </div>
+                    </div>
+                </form>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Modelo do Veículo</th>
+                            <th>Marca</th>
+                            <th>Ano</th>
+                            <th>Preço R$</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC8d8qxJHqBffv-t1IgOQsn9BDOAmKV3Gs",
+            authDomain: "revendapos20.firebaseapp.com",
+            databaseURL: "https://revendapos20.firebaseio.com",
+            projectId: "revendapos20",
+            storageBucket: "revendapos20.appspot.com",
+            messagingSenderId: "157006053266",
+            appId: "1:157006053266:web:b2340a08c1c65437684b4b"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore()
+    </script>
+
+</body>
+
+</html>
